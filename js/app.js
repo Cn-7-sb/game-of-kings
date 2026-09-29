@@ -165,21 +165,81 @@ $$('[data-nav]').forEach(a=>a.addEventListener('click',()=>$('.nav-links').class
   window.hudAdd=(pts,nc)=>{ s+=pts; c+=nc; score.textContent=String(s).padStart(6,'0'); coins.textContent='x'+String(c).padStart(2,'0'); };
 })();
 
-/* blocos clicáveis */
-$$('.h-block').forEach(b=>{
-  b.addEventListener('click',()=>{
-    if(b.disabled) return; b.disabled=true; setTimeout(()=>b.disabled=false,500);
-    b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
-    sfx.kick();
-    const layer=$('#coinLayer'), r=b.getBoundingClientRect(), hr=$('#hero').getBoundingClientRect();
-    const coin=document.createElement('img');
-    coin.src='assets/coin-f1.png'; coin.className='fly-coin';
-    coin.style.left=(r.left-hr.left+r.width/2-17)+'px';
-    coin.style.top=(r.top-hr.top-30)+'px';
-    layer.appendChild(coin);
-    setTimeout(()=>{ sfx.coin(); hudAdd(b.dataset.block==='brick'?50:200,1); coin.remove(); },260);
+/* ---------- MINI-GAME HERO ---------- */
+(function(){
+  const blocks = $$('.h-block');
+
+  const paths = [
+    {x: 0, y: 0, speed: 0.0018, phase: 0},
+    {x: 0, y: 0, speed: 0.0022, phase: 2},
+    {x: 0, y: 0, speed: 0.0015, phase: 4}
+  ];
+
+  const bases = blocks.map(b => ({
+    left: parseFloat(b.style.left) || 0,
+    top: parseFloat(b.style.top) || 0
+  }));
+
+  /* movimento contínuo */
+  function animate(time){
+    blocks.forEach((b,i)=>{
+      const p = paths[i];
+
+      const x = Math.sin(time * p.speed + p.phase) * 3.5;
+      const y = Math.sin(time * p.speed * 1.8 + p.phase) * 2.2;
+
+      b.style.left = (bases[i].left + x) + '%';
+      b.style.top = (bases[i].top + y) + '%';
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+
+  /* clicar no bloco */
+  blocks.forEach(b=>{
+    b.addEventListener('click',()=>{
+      if(b.disabled) return;
+
+      b.disabled = true;
+
+      b.classList.remove('bump');
+      void b.offsetWidth;
+      b.classList.add('bump');
+
+      sfx.kick();
+
+      const layer = $('#coinLayer');
+      const r = b.getBoundingClientRect();
+      const hr = $('#hero').getBoundingClientRect();
+
+      const coin = document.createElement('img');
+      coin.src = 'assets/coin-f1.png';
+      coin.className = 'fly-coin';
+
+      coin.style.left =
+        (r.left - hr.left + r.width / 2 - 17) + 'px';
+
+      coin.style.top =
+        (r.top - hr.top - 30) + 'px';
+
+      layer.appendChild(coin);
+
+      setTimeout(()=>{
+        sfx.coin();
+
+        const points =
+          b.dataset.block === 'brick' ? 50 : 200;
+
+        hudAdd(points, 1);
+
+        coin.remove();
+        b.disabled = false;
+      },260);
+    });
   });
-});
+})();
 
 /* parallax hero */
 (function(){
