@@ -69,27 +69,31 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 #hero{position:relative;height:100svh;min-height:640px;overflow:hidden;border-bottom:6px solid #000}
 .hero-bg{
   position:absolute;
-  inset:-50px -4%;
-  background:url('../assets/hero-mario-bc-4k.jpg') center bottom/cover no-repeat;
+  inset:-20px -8%;
+  background:url('../assets/hero-background.png') center bottom/cover no-repeat;
   will-change:transform;
   image-rendering:auto;
-  animation:heroCinematic 12s ease-in-out infinite alternate;
+  animation:hero-scroll 10s linear infinite alternate;
 }
 
-@keyframes heroCinematic{
-  0%{
-    transform:scale(1.06) translate3d(-1.5%,0,0);
-    background-position:46% bottom;
-  }
+.hero-character{
+  position:absolute;
+  left:23%;
+  bottom:10%;
+  width:110px;
+  height:auto;
+  z-index:5;
+  image-rendering:pixelated;
+  pointer-events:none;
+}
 
-  50%{
-    transform:scale(1.10) translate3d(0,-1%,0);
-    background-position:50% bottom;
+@keyframes hero-scroll{
+  0%{
+    transform:translateX(0);
   }
 
   100%{
-    transform:scale(1.06) translate3d(1.5%,0,0);
-    background-position:54% bottom;
+    transform:translateX(-90px);
   }
 }
 .hero-hud{position:absolute;top:76px;left:0;right:0;display:flex;justify-content:space-between;padding:0 26px;z-index:5;font-family:var(--px)}
