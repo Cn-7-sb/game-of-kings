@@ -419,8 +419,7 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   top:18%;
   left:67%;
   right:auto;
-  width:190px;
-  max-width:24%;
+  width:250px;
   height:auto;
   z-index:5;
   transform:rotate(14deg);
