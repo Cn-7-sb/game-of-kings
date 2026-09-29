@@ -396,11 +396,11 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 /* ---------- VS ENTRE OS DOIS ---------- */
 .sf-vs{
   position:absolute;
-  top:38%;
-  left:62%;
+  top:32%;
+  left:59%;
   right:auto;
   font-family:var(--px);
-  font-size:clamp(30px,4vw,54px);
+  font-size:clamp(28px,4vw,50px);
   color:var(--yellow);
   text-shadow:4px 4px 0 #000;
   transform:rotate(8deg);
