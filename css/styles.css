@@ -452,13 +452,14 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 
 .sf-vs{
   position:absolute;
-  top:38%;
-  right:6%;
+  top:37%;
+  right:-28%;
   font-family:var(--px);
   font-size:clamp(28px,4vw,52px);
   color:var(--yellow);
   text-shadow:4px 4px 0 #000;
   transform:rotate(8deg);
+  z-index:5;
   animation:blink 1.4s steps(2) infinite;
 }
 
