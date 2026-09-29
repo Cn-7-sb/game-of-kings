@@ -11,12 +11,73 @@ img{max-width:100%;display:block}
 button{cursor:none;font-family:inherit}
 ::selection{background:var(--yellow);color:#000}
 
-/* ---------- cursor ---------- */
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
-.cursor-dot{width:8px;height:8px;background:var(--yellow);border-radius:50%}
-.cursor-ring{width:36px;height:36px;border:2px solid rgba(255,216,0,.7);border-radius:50%;transition:width .18s,height .18s,border-color .18s}
-body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
-@media (hover:none){.cursor-dot,.cursor-ring{display:none}body,button{cursor:auto}}
+/* ---------- cursor mira pixelada ---------- */
+.cursor-dot,
+.cursor-ring{
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events:none;
+  z-index:9999;
+}
+
+.cursor-dot{
+  width:5px;
+  height:5px;
+  background:var(--yellow);
+  box-shadow:
+    0 0 0 2px #000,
+    0 0 8px rgba(255,216,0,.8);
+  transform:translate(-50%,-50%);
+}
+
+.cursor-ring{
+  width:32px;
+  height:32px;
+  border:3px solid var(--yellow);
+  border-radius:0;
+  box-shadow:
+    0 0 0 2px #000,
+    0 0 12px rgba(255,216,0,.45);
+}
+
+/* linhas da mira */
+.cursor-ring::before,
+.cursor-ring::after{
+  content:"";
+  position:absolute;
+  background:var(--yellow);
+  box-shadow:0 0 0 1px #000;
+}
+
+.cursor-ring::before{
+  width:44px;
+  height:3px;
+  left:-9px;
+  top:11px;
+}
+
+.cursor-ring::after{
+  width:3px;
+  height:44px;
+  left:11px;
+  top:-9px;
+}
+
+/* quando estiver em botão/link */
+body.cursor-hot .cursor-ring{
+  width:40px;
+  height:40px;
+  border-color:var(--red);
+  box-shadow:
+    0 0 0 2px #000,
+    0 0 16px rgba(229,37,33,.7);
+}
+
+body.cursor-hot .cursor-ring::before,
+body.cursor-hot .cursor-ring::after{
+  background:var(--red);
+}
 
 /* ---------- preloader ---------- */
 #preloader{position:fixed;inset:0;background:#0a0a12;z-index:9000;display:flex;align-items:center;justify-content:center;transition:opacity .5s,visibility .5s}
