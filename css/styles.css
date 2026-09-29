@@ -383,41 +383,49 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   position:relative;
   text-align:left;
   min-height:620px;
+  overflow:visible;
 }
 
 .sf-chunli img#chunliImg{
   width:360px;
-  max-width:60%;
+  max-width:52%;
   margin:0;
   display:block;
-  filter:drop-shadow(0 24px 30px rgba(0,0,0,.5));
+  filter:drop-shadow(0 24px 30px rgba(0,0,0,.55));
+  position:relative;
+  z-index:3;
 }
 
-/* ---------- VS ENTRE OS DOIS ---------- */
+/* ---------- VS ---------- */
 .sf-vs{
   position:absolute;
-  top:32%;
-  left:59%;
+  top:33%;
+  left:56%;
   right:auto;
   font-family:var(--px);
-  font-size:clamp(28px,4vw,50px);
+  font-size:clamp(36px,5vw,58px);
   color:var(--yellow);
-  text-shadow:4px 4px 0 #000;
+  text-shadow:
+    5px 5px 0 #000,
+    8px 8px 0 rgba(0,0,0,.35);
   transform:rotate(8deg);
-  z-index:10;
+  z-index:6;
   animation:blink 1.4s steps(2) infinite;
 }
 
-/* ---------- REFRIGERANTE ---------- */
+/* ---------- MONSTER ---------- */
 .sf-drink{
   position:absolute;
   top:18%;
-  left:73%;
+  left:67%;
   right:auto;
   width:190px;
+  max-width:24%;
   height:auto;
-  z-index:9;
-  filter:drop-shadow(0 18px 20px rgba(0,0,0,.55));
+  z-index:5;
+  transform:rotate(14deg);
+  transform-origin:center;
+  filter:drop-shadow(0 22px 22px rgba(0,0,0,.6));
 }
 
 .sf-name{
