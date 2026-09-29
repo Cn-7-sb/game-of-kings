@@ -314,36 +314,265 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 .marquee-track i{font-style:normal}
 
 /* ---------- street fighter ---------- */
-#sf{position:relative;background:url('../assets/sf-red-bg-4k.jpg') center/cover fixed;padding:90px 5vw;color:#fff}
-#sf::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(120,0,10,.55),rgba(40,0,6,.75))}
-.sf-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto}
-.sf-kicker{font-family:var(--px);font-size:10px;color:var(--yellow);letter-spacing:2px}
-.sf-title{font-size:clamp(38px,7vw,84px);font-weight:900;line-height:.95;margin:14px 0 6px;font-style:italic;text-transform:uppercase;text-shadow:5px 5px 0 rgba(0,0,0,.45)}
-.sf-title span{color:var(--yellow)}
-.sf-sub{font-size:16px;color:#ffd9dd}
-.sf-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;margin-top:44px;align-items:start}
-@media(max-width:960px){.sf-grid{grid-template-columns:1fr}}
-.sf-chunli{position:relative;text-align:center}
-.sf-chunli img{width:min(420px,80vw);margin:0 auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.5));animation:kick 3.2s ease-in-out infinite}
-@keyframes kick{0%,55%,100%{transform:translate(0,0) rotate(0)}12%{transform:translate(26px,-8px) rotate(4deg)}24%{transform:translate(0,0) rotate(0)}}
-.sf-vs{position:absolute;top:38%;right:6%;font-family:var(--px);font-size:clamp(28px,4vw,52px);color:var(--yellow);text-shadow:4px 4px 0 #000;transform:rotate(8deg);animation:blink 1.4s steps(2) infinite}
-.sf-name{font-family:var(--px);font-size:12px;margin-top:14px;color:#fff}
-.sf-name em{display:block;font-size:8px;color:#ffb3bb;font-style:normal;margin-top:6px}
-.sf-bars{margin-top:20px;display:grid;gap:10px}
-.bar{display:grid;grid-template-columns:86px 1fr;align-items:center;gap:10px;font-family:var(--px);font-size:8px}
-.bar-track{height:16px;border:2px solid #fff;background:#000}
-.bar-fill{height:100%;width:0;transition:width 1.2s cubic-bezier(.2,.9,.2,1)}
-.f-green{background:var(--green)}.f-yellow{background:var(--yellow)}.f-red{background:var(--red)}
-.sf-combos{display:grid;gap:18px}
-.combo-card{background:rgba(8,4,8,.82);border:3px solid #fff;padding:20px 22px;position:relative;transition:transform .2s,border-color .2s}
-.combo-card:hover{transform:translateX(8px);border-color:var(--yellow)}
-.combo-top{display:flex;justify-content:space-between;font-family:var(--px);font-size:10px;margin-bottom:10px}
-.combo-input{color:var(--yellow)}
-.combo-price{color:#7dff9a}
-.combo-card h3{font-family:var(--px);font-size:14px;margin-bottom:8px}
-.combo-card p{font-size:14px;color:#e8d7da}
-.combo-card p b{color:var(--yellow)}
-.btn-add{margin-top:14px;background:var(--yellow);color:#000;font-size:9px;padding:12px 16px;box-shadow:0 5px 0 #b89b00}
+#sf{
+  position:relative;
+  background:url('../assets/sf-red-bg-4k.jpg') center/cover fixed;
+  padding:90px 5vw;
+  color:#fff;
+}
+
+#sf::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(120,0,10,.55),
+    rgba(40,0,6,.75)
+  );
+}
+
+.sf-inner{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.sf-kicker{
+  font-family:var(--px);
+  font-size:10px;
+  color:var(--yellow);
+  letter-spacing:2px;
+}
+
+.sf-title{
+  font-size:clamp(38px,7vw,84px);
+  font-weight:900;
+  line-height:.95;
+  margin:14px 0 6px;
+  font-style:italic;
+  text-transform:uppercase;
+  text-shadow:5px 5px 0 rgba(0,0,0,.45);
+}
+
+.sf-title span{
+  color:var(--yellow);
+}
+
+.sf-sub{
+  font-size:16px;
+  color:#ffd9dd;
+}
+
+.sf-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:44px;
+  margin-top:44px;
+  align-items:start;
+}
+
+@media(max-width:960px){
+  .sf-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.sf-chunli{
+  position:relative;
+  text-align:center;
+}
+
+.sf-chunli img{
+  width:min(420px,80vw);
+  margin:0 auto;
+  filter:drop-shadow(0 24px 30px rgba(0,0,0,.5));
+}
+
+/* ---------- golpe na frente da Chun-Li ---------- */
+.sf-attack{
+  position:absolute;
+  top:30%;
+  right:-2%;
+  width:170px;
+  height:120px;
+  z-index:4;
+  pointer-events:none;
+  animation:attackPulse 1.3s ease-in-out infinite;
+}
+
+.attack-ring{
+  position:absolute;
+  right:20px;
+  top:25px;
+  width:62px;
+  height:62px;
+  border:5px solid var(--yellow);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 3px #000,
+    0 0 20px rgba(255,216,0,.8);
+}
+
+.attack-flash{
+  position:absolute;
+  right:39px;
+  top:25px;
+  font-size:42px;
+  color:#fff;
+  font-weight:900;
+  text-shadow:
+    3px 3px 0 #000,
+    0 0 18px var(--yellow);
+}
+
+.attack-speed{
+  position:absolute;
+  right:68px;
+  top:49px;
+  font-family:var(--px);
+  font-size:24px;
+  letter-spacing:-7px;
+  color:#fff;
+  text-shadow:3px 3px 0 #000;
+}
+
+@keyframes attackPulse{
+  0%,100%{
+    transform:translateX(0) scale(.9);
+    opacity:.65;
+  }
+
+  50%{
+    transform:translateX(8px) scale(1.08);
+    opacity:1;
+  }
+}
+
+.sf-vs{
+  position:absolute;
+  top:38%;
+  right:6%;
+  font-family:var(--px);
+  font-size:clamp(28px,4vw,52px);
+  color:var(--yellow);
+  text-shadow:4px 4px 0 #000;
+  transform:rotate(8deg);
+  animation:blink 1.4s steps(2) infinite;
+}
+
+.sf-name{
+  font-family:var(--px);
+  font-size:12px;
+  margin-top:14px;
+  color:#fff;
+}
+
+.sf-name em{
+  display:block;
+  font-size:8px;
+  color:#ffb3bb;
+  font-style:normal;
+  margin-top:6px;
+}
+
+.sf-bars{
+  margin-top:20px;
+  display:grid;
+  gap:10px;
+}
+
+.bar{
+  display:grid;
+  grid-template-columns:86px 1fr;
+  align-items:center;
+  gap:10px;
+  font-family:var(--px);
+  font-size:8px;
+}
+
+.bar-track{
+  height:16px;
+  border:2px solid #fff;
+  background:#000;
+}
+
+.bar-fill{
+  height:100%;
+  width:0;
+  transition:width 1.2s cubic-bezier(.2,.9,.2,1);
+}
+
+.f-green{
+  background:var(--green);
+}
+
+.f-yellow{
+  background:var(--yellow);
+}
+
+.f-red{
+  background:var(--red);
+}
+
+.sf-combos{
+  display:grid;
+  gap:18px;
+}
+
+.combo-card{
+  background:rgba(8,4,8,.82);
+  border:3px solid #fff;
+  padding:20px 22px;
+  position:relative;
+  transition:transform .2s,border-color .2s;
+}
+
+.combo-card:hover{
+  transform:translateX(8px);
+  border-color:var(--yellow);
+}
+
+.combo-top{
+  display:flex;
+  justify-content:space-between;
+  font-family:var(--px);
+  font-size:10px;
+  margin-bottom:10px;
+}
+
+.combo-input{
+  color:var(--yellow);
+}
+
+.combo-price{
+  color:#7dff9a;
+}
+
+.combo-card h3{
+  font-family:var(--px);
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.combo-card p{
+  font-size:14px;
+  color:#e8d7da;
+}
+
+.combo-card p b{
+  color:var(--yellow);
+}
+
+.btn-add{
+  margin-top:14px;
+  background:var(--yellow);
+  color:#000;
+  font-size:9px;
+  padding:12px 16px;
+  box-shadow:0 5px 0 #b89b00;
+}
 
 /* ---------- charizard ---------- */
 #charizard{position:relative;min-height:92vh;overflow:hidden;border-top:6px solid #000;border-bottom:6px solid #000;display:flex;align-items:flex-end}
