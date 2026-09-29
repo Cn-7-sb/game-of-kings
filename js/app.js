@@ -241,15 +241,6 @@ $$('[data-nav]').forEach(a=>a.addEventListener('click',()=>$('.nav-links').class
   });
 })();
 
-/* parallax hero */
-(function(){
-  const bg=$('#heroBg');
-  addEventListener('mousemove',e=>{
-    const x=(e.clientX/innerWidth-.5)*18, y=(e.clientY/innerHeight-.5)*12;
-    bg.style.transform=`translate(${x}px,${y}px)`;
-  });
-})();
-
 /* ---------- CARDAPIO ---------- */
 (function(){
   const tabs=$('#menuTabs'), grid=$('#menuGrid');
