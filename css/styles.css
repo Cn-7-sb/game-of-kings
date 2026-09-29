@@ -367,8 +367,8 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 
 .sf-grid{
   display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:44px;
+  grid-template-columns:1.25fr 1fr;
+  gap:30px;
   margin-top:44px;
   align-items:start;
 }
@@ -381,8 +381,8 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 
 .sf-chunli{
   position:relative;
-  text-align:center;
-  z-index:5;
+  text-align:left;
+  min-height:620px;
 }
 
 .sf-drink{
