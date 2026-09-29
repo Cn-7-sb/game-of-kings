@@ -396,8 +396,10 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 }
 
 .sf-chunli img#chunliImg{
-  width:min(420px,80vw);
-  margin:0 auto;
+  width:360px;
+  max-width:60%;
+  margin:0;
+  display:block;
   filter:drop-shadow(0 24px 30px rgba(0,0,0,.5));
 }
 
