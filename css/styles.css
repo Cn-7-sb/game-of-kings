@@ -382,15 +382,16 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 .sf-chunli{
   position:relative;
   text-align:center;
+  z-index:5;
 }
 
 .sf-drink{
   position:absolute;
-  top:24%;
-  right:-58%;
-  width:150px;
+  top:18%;
+  right:-25%;
+  width:220px;
   height:auto;
-  z-index:4;
+  z-index:9;
   filter:drop-shadow(0 18px 20px rgba(0,0,0,.55));
 }
 
