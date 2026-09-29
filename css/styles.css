@@ -129,7 +129,12 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 /* ---------- charizard ---------- */
 #charizard{position:relative;min-height:92vh;overflow:hidden;border-top:6px solid #000;border-bottom:6px solid #000;display:flex;align-items:flex-end}
 .char-bg{position:absolute;inset:-60px 0;background:url('../assets/charizard-burger-4k.jpg') center/cover no-repeat;will-change:transform}
-.char-overlay{position:relative;z-index:2;padding:70px 5vw;max-width:760px}
+.char-overlay{
+  position:relative;
+  z-index:2;
+  padding:110px 5vw 70px;
+  max-width:760px;
+}
 .char-badge{font-family:var(--px);font-size:10px;background:var(--red);display:inline-block;padding:10px 14px;box-shadow:4px 4px 0 #000;margin-bottom:18px}
 .char-title{font-size:clamp(34px,6vw,72px);font-weight:900;line-height:1;text-shadow:4px 4px 0 rgba(0,0,0,.6)}
 .char-title span{color:var(--yellow)}
