@@ -384,7 +384,17 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   text-align:center;
 }
 
-.sf-chunli img{
+.sf-drink{
+  position:absolute;
+  top:24%;
+  right:-58%;
+  width:150px;
+  height:auto;
+  z-index:4;
+  filter:drop-shadow(0 18px 20px rgba(0,0,0,.55));
+}
+
+.sf-chunli img#chunliImg{
   width:min(420px,80vw);
   margin:0 auto;
   filter:drop-shadow(0 24px 30px rgba(0,0,0,.5));
