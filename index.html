@@ -51,39 +51,101 @@
 
 <!-- ============ HERO ============ -->
 <header id="hero">
-  <div class="hero-bg" id="heroBg"></div>
 
-  
+  <!-- VÍDEO DE FUNDO -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video-background.mp4" type="video/mp4">
+  </video>
+
+  <!-- ESCURECE LEVEMENTE O VÍDEO -->
+  <div class="hero-overlay"></div>
+
+  <!-- HUD -->
+  <div class="hero-hud">
+    <div class="hud-left">
+      <span class="hud-tag">GOK</span>
+      <span class="hud-score">
+        SCORE&nbsp;<b id="hudScore">000000</b>
+      </span>
+    </div>
+
+    <div class="hud-right">
+      <span class="hud-coins">
+        <span class="coin-ico small"></span>&nbsp;
+        <b id="hudCoins">x00</b>
+      </span>
+
+      <span class="hud-time">
+        TIME&nbsp;<b id="hudTime">300</b>
+      </span>
+    </div>
+  </div>
+
+  <!-- TÍTULO -->
+  <div class="hero-title">
+    <div class="hero-kicker">// PLAYER 1 READY</div>
+
+    <h1>
+      GAMES
+      <span>OF</span>
+      KINGS
+    </h1>
+
+    <p>BURGER & VIDEOGAME BAR</p>
+  </div>
+
+  <!-- PERSONAGEM -->
   <img
     src="assets/mario-stand.png"
     class="hero-character"
     alt=""
   >
 
-  <div class="hero-hud">
-    <div class="hud-left">
-      <span class="hud-tag">GOK</span>
-      <span class="hud-score">SCORE&nbsp;<b id="hudScore">000000</b></span>
-    </div>
-    <div class="hud-right">
-      <span class="hud-coins"><span class="coin-ico small"></span>&nbsp;<b id="hudCoins">x00</b></span>
-      <span class="hud-time">TIME&nbsp;<b id="hudTime">300</b></span>
-    </div>
-  </div>
+  <!-- BLOCOS -->
+  <button
+    class="h-block b-q"
+    style="left:58.6%;top:57.4%"
+    data-block="q"
+    aria-label="Bloco interrogação">
+  </button>
 
-  <!-- blocos clicáveis -->
-  <button class="h-block b-q" style="left:58.6%;top:57.4%" data-block="q" aria-label="Bloco interrogação"></button>
-  <button class="h-block b-q" style="left:65.4%;top:57.4%" data-block="q" aria-label="Bloco interrogação"></button>
-  <button class="h-block b-brick" style="left:51.8%;top:57.4%" data-block="brick" aria-label="Bloco de tijolo"></button>
+  <button
+    class="h-block b-q"
+    style="left:65.4%;top:57.4%"
+    data-block="q"
+    aria-label="Bloco interrogação">
+  </button>
 
+  <button
+    class="h-block b-brick"
+    style="left:51.8%;top:57.4%"
+    data-block="brick"
+    aria-label="Bloco de tijolo">
+  </button>
+
+  <!-- BOTÕES -->
   <div class="hero-cta">
-    <a href="#menu" class="btn btn-red" data-nav>VER CARDÁPIO</a>
-    <a href="#builder" class="btn btn-blue" data-nav>MONTE SEU BURGER</a>
-  </div>
-  <div class="hero-scroll blink-soft">▼ SCROLL PARA ENTRAR ▼</div>
-  <div id="coinLayer"></div>
-</header>
 
+    <a href="#menu" class="btn btn-red" data-nav>
+      VER CARDÁPIO
+    </a>
+
+    <a href="#builder" class="btn btn-blue" data-nav>
+      MONTE SEU BURGER
+    </a>
+
+  </div>
+
+  <!-- SCROLL -->
+  <div class="hero-scroll blink-soft">
+    ▼ SCROLL PARA ENTRAR ▼
+  </div>
+
+  <!-- MOEDAS -->
+  <div id="coinLayer"></div>
+
+</header>
+  
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track" id="marqueeTrack">
