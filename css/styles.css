@@ -74,34 +74,84 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   border-bottom:6px solid #000;
 }
 
-.hero-bg{
+/* ---------- vídeo de fundo ---------- */
+.hero-video{
   position:absolute;
-  top:-8%;
-  left:0;
-  width:200%;
-  height:116%;
-  background-image:url('../assets/hero-background.png');
-  background-position:left bottom;
-  background-size:50% 100%;
-  background-repeat:repeat-x;
-  will-change:transform;
-  image-rendering:auto;
-  animation:hero-scroll 18s linear infinite;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  pointer-events:none;
 }
 
-@keyframes hero-scroll{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-50%);
-  }
-}
-  100%{
-    transform:translateX(-12%) scale(1.04);
-  }
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.22);
+  z-index:1;
+  pointer-events:none;
 }
 
+/* ---------- personagem ---------- */
+.hero-character{
+  position:absolute;
+  left:23%;
+  bottom:10%;
+  width:110px;
+  height:auto;
+  z-index:5;
+  image-rendering:pixelated;
+  pointer-events:none;
+}
+
+/* ---------- título ---------- */
+.hero-title{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-58%);
+  width:min(900px,90%);
+  text-align:center;
+  z-index:5;
+  pointer-events:none;
+}
+
+.hero-kicker{
+  font-family:var(--px);
+  font-size:12px;
+  margin-bottom:18px;
+  letter-spacing:2px;
+  color:#fff;
+  text-shadow:2px 2px 0 #000;
+}
+
+.hero-title h1{
+  margin:0;
+  font-family:var(--px);
+  font-size:clamp(38px,7vw,88px);
+  line-height:.95;
+  color:#fff;
+  text-shadow:
+    5px 5px 0 #000,
+    8px 8px 0 rgba(0,0,0,.45);
+}
+
+.hero-title h1 span{
+  display:inline-block;
+  color:var(--yellow);
+}
+
+.hero-title p{
+  margin:20px 0 0;
+  font-family:var(--px);
+  font-size:clamp(10px,1.5vw,16px);
+  letter-spacing:3px;
+  color:#fff;
+  text-shadow:3px 3px 0 #000;
+}
+
+/* ---------- HUD ---------- */
 .hero-hud{
   position:absolute;
   top:76px;
@@ -146,6 +196,7 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   color:var(--yellow);
 }
 
+/* ---------- botões ---------- */
 .hero-cta{
   position:absolute;
   left:50%;
@@ -207,6 +258,7 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   box-shadow:0 6px 0 #1c7a34;
 }
 
+/* ---------- blocos ---------- */
 .h-block{
   position:absolute;
   width:5.9%;
@@ -247,6 +299,7 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
   }
 }
 
+/* ---------- moeda ---------- */
 .fly-coin{
   position:absolute;
   width:34px;
