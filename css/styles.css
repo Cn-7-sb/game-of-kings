@@ -77,31 +77,26 @@ body.cursor-hot .cursor-ring{width:56px;height:56px;border-color:var(--red)}
 .hero-bg{
   position:absolute;
   top:-8%;
-  left:-25%;
-  width:150%;
+  left:0;
+  width:200%;
   height:116%;
-  background:url('../assets/hero-background.png') center bottom/cover no-repeat;
+  background-image:url('../assets/hero-background.png');
+  background-position:left bottom;
+  background-size:50% 100%;
+  background-repeat:repeat-x;
   will-change:transform;
   image-rendering:auto;
-  animation:hero-scroll 9s ease-in-out infinite alternate;
-}
-
-.hero-character{
-  position:absolute;
-  left:23%;
-  bottom:10%;
-  width:110px;
-  height:auto;
-  z-index:5;
-  image-rendering:pixelated;
-  pointer-events:none;
+  animation:hero-scroll 18s linear infinite;
 }
 
 @keyframes hero-scroll{
-  0%{
-    transform:translateX(0) scale(1);
+  from{
+    transform:translateX(0);
   }
-
+  to{
+    transform:translateX(-50%);
+  }
+}
   100%{
     transform:translateX(-12%) scale(1.04);
   }
