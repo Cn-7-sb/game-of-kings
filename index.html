@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games of Kings — Burger & Videogame Bar | Balneário Camboriú</title>
+<meta name="description" content="Hamburgueria temática de videogames em Balneário Camboriú. Lanches artesanais + fliperama free play. Peça direto pelo site!">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="dark">
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="pre-box">
+    <img src="assets/burger-up.png" alt="Games of Kings" class="pre-logo">
+    <div class="pre-title">GAMES OF KINGS</div>
+    <div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+    <div class="pre-label" id="preLabel">CARREGANDO...</div>
+    <button class="pre-start blink" id="preStart" hidden>PRESS START</button>
+    <div class="pre-hint">🔊 ligue o som para a experiência completa</div>
+  </div>
+</div>
+
+<!-- cursor customizado -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <a class="nav-logo" href="#hero" data-nav>
+    <img src="assets/burger-up.png" alt="">
+    <span>GAMES<em>OF</em>KINGS</span>
+  </a>
+  <div class="nav-links">
+    <a href="#hero" data-nav>Início</a>
+    <a href="#sf" data-nav>Arena</a>
+    <a href="#charizard" data-nav>Na Brasa</a>
+    <a href="#menu" data-nav>Cardápio</a>
+    <a href="#builder" data-nav>Monte o Seu</a>
+    <a href="#about" data-nav>Sobre</a>
+  </div>
+  <button class="nav-cart" id="navCart" aria-label="Carrinho">
+    <span class="coin-ico"></span>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+  <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-hud">
+    <div class="hud-left">
+      <span class="hud-tag">GOK</span>
+      <span class="hud-score">SCORE&nbsp;<b id="hudScore">000000</b></span>
+    </div>
+    <div class="hud-right">
+      <span class="hud-coins"><span class="coin-ico small"></span>&nbsp;<b id="hudCoins">x00</b></span>
+      <span class="hud-time">TIME&nbsp;<b id="hudTime">300</b></span>
+    </div>
+  </div>
+
+  <!-- blocos clicáveis -->
+  <button class="h-block b-q" style="left:58.6%;top:57.4%" data-block="q" aria-label="Bloco interrogação"></button>
+  <button class="h-block b-q" style="left:65.4%;top:57.4%" data-block="q" aria-label="Bloco interrogação"></button>
+  <button class="h-block b-brick" style="left:51.8%;top:57.4%" data-block="brick" aria-label="Bloco de tijolo"></button>
+
+  <div class="hero-cta">
+    <a href="#menu" class="btn btn-red" data-nav>VER CARDÁPIO</a>
+    <a href="#builder" class="btn btn-blue" data-nav>MONTE SEU BURGER</a>
+  </div>
+  <div class="hero-scroll blink-soft">▼ SCROLL PARA ENTRAR ▼</div>
+  <div id="coinLayer"></div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>INSERT COIN</span><i>★</i><span>PLAYER 1 READY</span><i>★</i>
+    <span>+15 MIN DE JOGOS EM TODOS OS LANCHES</span><i>★</i>
+    <span>NOTA 4,9 NO GOOGLE</span><i>★</i><span>ABERTO ATÉ 23H30</span><i>★</i>
+    <span>PET FRIENDLY</span><i>★</i><span>CHOPP ARTESANAL</span><i>★</i>
+  </div>
+</div>
+
+<!-- ============ STREET FIGHTER ============ -->
+<section id="sf">
+  <div class="sf-inner">
+    <div class="sf-head">
+      <div class="sf-kicker">// KING'S ARENA</div>
+      <h2 class="sf-title"><span>KOMBO</span> DO CHEF</h2>
+      <div class="sf-sub">Golpes de sabor com precisão de frame. <b>PERFEITO!</b></div>
+    </div>
+    <div class="sf-grid">
+      <div class="sf-chunli reveal">
+        <img src="assets/chunli-monster-4k.png" alt="Chun-Li chutando uma lata de energético" id="chunliImg">
+        <div class="sf-vs">VS</div>
+        <div class="sf-name">CHUN-LI <em>“o chute da energia”</em></div>
+        <div class="sf-bars">
+          <div class="bar"><label>PICANTE</label><div class="bar-track"><div class="bar-fill f-green" data-w="70"></div></div></div>
+          <div class="bar"><label>ENERGIA</label><div class="bar-track"><div class="bar-fill f-yellow" data-w="100"></div></div></div>
+          <div class="bar"><label>SABOR</label><div class="bar-track"><div class="bar-fill f-red" data-w="95"></div></div></div>
+        </div>
+      </div>
+      <div class="sf-combos">
+        <article class="combo-card reveal">
+          <div class="combo-top"><span class="combo-input">↓↘→ + P</span><span class="combo-price">R$ 58</span></div>
+          <h3>HADOUKEN COMBO</h3>
+          <p>Power-Up Burger + Batata frita 180g + Refrigerante lata + <b>15 min de jogos</b></p>
+          <button class="btn btn-add" data-add-combo="hadouken">ADD +</button>
+        </article>
+        <article class="combo-card reveal">
+          <div class="combo-top"><span class="combo-input">→↓↘ + K</span><span class="combo-price">R$ 66</span></div>
+          <h3>SHORYUKEN COMBO</h3>
+          <p>Bacon Kong + Batata frita 180g + Suco integral + <b>15 min de jogos</b></p>
+          <button class="btn btn-add" data-add-combo="shoryuken">ADD +</button>
+        </article>
+        <article class="combo-card reveal">
+          <div class="combo-top"><span class="combo-input">←↙↓↘→ + P</span><span class="combo-price">R$ 82</span></div>
+          <h3>FATALITY COMBO</h3>
+          <p>Fatality Burger + Tirinhas de frango + Chopp 320ml + <b>25 min de jogos</b></p>
+          <button class="btn btn-add" data-add-combo="fatality">ADD +</button>
+        </article>
+        <article class="combo-card reveal">
+          <div class="combo-top"><span class="combo-input">→↘↓↙←→ + P</span><span class="combo-price">R$ 120</span></div>
+          <h3>ULTRA COMBO DA CASA</h3>
+          <p>2 burgers à escolha + Batatas bacon e cheddar + Balde Budweiser x4 + <b>60 min de jogos</b></p>
+          <button class="btn btn-add" data-add-combo="ultra">ADD +</button>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHARIZARD ============ -->
+<section id="charizard">
+  <div class="char-bg" id="charBg"></div>
+  <div class="char-overlay">
+    <div class="char-badge reveal">🔥 CARNE ANGUS 150G SELADA EM FOGO REAL</div>
+    <h2 class="char-title reveal">GRELHA NO <span>FOGO</span><br>DO DRAGÃO</h2>
+    <p class="char-sub reveal">Cada burger sai da cozinha como um golpe especial: 150g de angus, maionese artesanal e pão brioche — finalizados na chama.</p>
+    <a href="#menu" class="btn btn-yellow reveal" data-nav>ESCOLHER MEU BURGER</a>
+  </div>
+</section>
+
+<!-- ============ CARDAPIO ============ -->
+<section id="menu">
+  <div class="menu-head">
+    <div class="sf-kicker">// SELECT YOUR ITEM</div>
+    <h2 class="menu-title">CARDÁPIO <span>PIXEL</span></h2>
+    <p class="menu-sub">Todo item do cardápio libera <b>minutos de videogame grátis</b> na hora. Monte o pedido e finalize direto no nosso WhatsApp.</p>
+  </div>
+  <div class="menu-tabs" id="menuTabs"></div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- ============ BUILDER ============ -->
+<section id="builder">
+  <div class="builder-head">
+    <div class="sf-kicker">// LEGO MODE: BUILD YOUR BURGER</div>
+    <h2 class="builder-title">MONTE SEU <span>BURGER</span></h2>
+    <p class="builder-sub">Empilhe os blocos e crie a sua construção definitiva — cada camada entra no pedido.</p>
+  </div>
+  <div class="builder-grid">
+    <div class="builder-preview">
+      <div class="lego-float l1"></div><div class="lego-float l2"></div><div class="lego-float l3"></div>
+      <div class="stack" id="burgerStack">
+        <div class="stack-layer" data-layer="top"><img src="assets/burger-up.png" alt=""></div>
+      </div>
+      <div class="builder-total">TOTAL <b id="builderTotal">R$ 0,00</b></div>
+      <button class="btn btn-red" id="builderAdd">ADICIONAR AO PEDIDO</button>
+    </div>
+    <div class="builder-controls">
+      <h3>1 · ESCOLHA A BASE</h3>
+      <div class="base-list" id="baseList"></div>
+      <h3>2 · EMPILHE OS BLOCOS</h3>
+      <div class="extras-list" id="extrasList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SWITCH ============ -->
+<section id="switch">
+  <div class="switch-bg" id="switchBg"></div>
+  <div class="switch-overlay">
+    <h2 class="switch-title reveal">LIBERDADE PRA<br>SE <span>DIVERTIR</span></h2>
+    <div class="switch-feats">
+      <div class="feat reveal"><b>🎮</b><span>Fliperama free play por minutos a cada pedido</span></div>
+      <div class="feat reveal"><b>👨‍👩‍👧</b><span>Cardápio infantil e ambiente pra família inteira</span></div>
+      <div class="feat reveal"><b>🐶</b><span>Pet friendly — seu cachorro é bem-vindo</span></div>
+      <div class="feat reveal"><b>♿</b><span>Acessibilidade total na entrada</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-info reveal">
+      <div class="sf-kicker">// PLAYER STATUS</div>
+      <h2>GAMES OF KINGS</h2>
+      <div class="rating"><span class="stars">★★★★★</span> <b>4,9</b> · 465 avaliações no Google</div>
+      <ul class="about-list">
+        <li>📍 R. 1300 — Centro, Balneário Camboriú / SC</li>
+        <li>🕚 Todos os dias · aberto agora · fecha 23:30</li>
+        <li>📞 <a href="tel:+5547991380151">(47) 99138-0151</a></li>
+        <li>💳 Crédito, débito e NFC</li>
+        <li>🛵 Entrega · retirada · refeição no local</li>
+      </ul>
+      <div class="about-btns">
+        <a class="btn btn-blue" href="https://www.google.com/maps/search/?api=1&query=R.+1300+-+Centro,+Balne%C3%A1rio+Cambori%C3%BA+-+SC" target="_blank" rel="noopener">TRAÇAR ROTA</a>
+        <a class="btn btn-red" href="tel:+5547991380151">LIGAR AGORA</a>
+      </div>
+    </div>
+    <div class="about-review reveal">
+      <div class="rv-quote">“Meu filho de 9 anos ficou encantado do início ao fim. Foi muito mais do que apenas uma refeição.”</div>
+      <div class="rv-author">— Graciela Gomes, Local Guide</div>
+      <div class="rv-stars">★★★★★</div>
+      <div class="rv-more">+ 464 jogadores felizes concordam</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo"><img src="assets/burger-up.png" alt=""><span>GAMES OF KINGS</span></div>
+    <div class="foot-tag blink-soft">PRESS START TO EAT</div>
+    <div class="foot-meta">Balneário Camboriú · SC · feito com 8 bits e muito cheddar</div>
+  </div>
+</footer>
+
+<!-- ============ CARRINHO ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho">
+  <div class="cart-head">
+    <h3>INVENTÁRIO</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-empty" id="cartEmpty">
+    <img src="assets/star.png" alt="">
+    <p>INVENTÁRIO VAZIO<br><small>colete itens pelo cardápio</small></p>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-row"><span>Subtotal</span><b id="cartSubtotal">R$ 0,00</b></div>
+    <div class="cart-row"><span>Minutos de jogos ganhos</span><b id="cartMins" class="mins">+0 min</b></div>
+    <div class="cart-form">
+      <input type="text" id="fName" placeholder="Seu nome" autocomplete="name">
+      <div class="f-modes">
+        <label><input type="radio" name="mode" value="Entrega" checked> Entrega</label>
+        <label><input type="radio" name="mode" value="Retirada"> Retirada</label>
+        <label><input type="radio" name="mode" value="Mesa"> Comer no local</label>
+      </div>
+      <input type="text" id="fAddr" placeholder="Endereço / nº da mesa" autocomplete="off">
+      <select id="fPay">
+        <option value="Pix">Pix</option><option value="Cartão">Cartão</option>
+        <option value="Dinheiro">Dinheiro</option>
+      </select>
+    </div>
+    <button class="btn btn-green cart-send" id="cartSend">FINALIZAR NO WHATSAPP ➤</button>
+  </div>
+</aside>
+
+<div id="toast"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
