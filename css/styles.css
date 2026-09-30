@@ -2046,3 +2046,29 @@ footer{
   }
 
 }
+
+
+/* =========================================================
+   AJUSTE FINAL — STREET FIGHTER MOBILE
+   ========================================================= */
+
+
+@media (max-width:700px){
+
+  /* CHUN-LI — um pouco para a esquerda */
+  #sf .sf-chunli img#chunliImg{
+    position:absolute !important;
+    left:0 !important;
+    transform:translateX(-35px) !important;
+  }
+
+  /* MONSTER — bem mais para a direita */
+  #sf .sf-chunli .sf-drink{
+    position:absolute !important;
+    right:-35px !important;
+    left:auto !important;
+    transform:translateX(65px) rotate(14deg) !important;
+  }
+
+}
+
