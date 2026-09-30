@@ -570,13 +570,12 @@ button{cursor:none;font-family:inherit}
 
 .char-pixel{
   position:absolute;
-  right:-3%;
-  bottom:-2%;
-  width:min(72vw,950px);
+  right:-8%;
+  bottom:-4%;
+  width:min(82vw,1100px);
   height:auto;
-  object-fit:contain;
   z-index:1;
-  filter:drop-shadow(0 25px 25px rgba(0,0,0,.65));
+  filter:drop-shadow(0 30px 30px rgba(0,0,0,.65));
 }
 
 .char-overlay{
