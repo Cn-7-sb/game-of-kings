@@ -19,10 +19,14 @@ button{cursor:none;font-family:inherit}
   left:0;
   width:52px;
   height:52px;
-  background:url('../assets/normal.gif') center/contain no-repeat;
+  background-image:url('../assets/normal.gif');
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
   pointer-events:none;
-  z-index:9999;
+  z-index:99999;
   transform:translate(-50%,-50%);
+  display:block !important;
 }
 
 .cursor-ring{
