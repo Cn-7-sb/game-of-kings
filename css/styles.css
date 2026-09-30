@@ -869,24 +869,21 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
   }
 }
 
-/* ===== BUILDER FIXO NO CELULAR ===== */
+/* ===== PREVIEW DO BURGER FIXO NO CELULAR ===== */
 @media (max-width: 900px){
 
-  .builder-grid{
-    display:flex !important;
-    flex-direction:column !important;
-  }
-
   .builder-preview{
-    position:sticky !important;
-    position:-webkit-sticky !important;
-    top:70px !important;
-    z-index:50 !important;
-    align-self:stretch !important;
+    position:fixed !important;
+    top:75px !important;
+    left:15px !important;
+    width:calc(100vw - 30px) !important;
+    z-index:100 !important;
+    margin:0 !important;
   }
 
   .builder-controls{
-    position:relative;
-    z-index:1;
+    padding-top:420px !important;
   }
+
 }
+
