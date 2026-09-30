@@ -771,51 +771,64 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
-/* ---------- CHARIZARD NO CELULAR ---------- */
-@media(max-width:700px){
+/* ===== CORREÇÃO FINAL — CHARIZARD MOBILE ===== */
+@media screen and (max-width: 700px){
 
   #charizard{
-    min-height:780px;
-    position:relative;
-    overflow:hidden;
+    min-height: 720px !important;
+    display:block !important;
+    overflow:hidden !important;
   }
 
-  .char-overlay{
-    position:relative;
-    width:100%;
-    max-width:none;
-    padding:55px 24px 0;
-    z-index:3;
+  #charizard > .char-pixel{
+    position:absolute !important;
+    width:82vw !important;
+    max-width:none !important;
+    height:auto !important;
+    right:-12% !important;
+    bottom:0 !important;
+    z-index:1 !important;
   }
 
-  .char-title{
-    font-size:clamp(38px,12vw,58px);
-    line-height:.95;
+  #charizard > .char-overlay{
+    position:relative !important;
+    left:auto !important;
+    bottom:auto !important;
+    width:100% !important;
+    max-width:none !important;
+    padding:45px 22px 0 !important;
+    z-index:3 !important;
   }
 
-  .char-sub{
-    font-size:14px;
-    max-width:90%;
+  #charizard .char-title{
+    font-size:clamp(36px,11vw,54px) !important;
   }
 
-  .char-pixel{
-    width:105vw;
-    max-width:none;
-    right:-28%;
-    bottom:-3%;
-    z-index:1;
+  #charizard .char-sub{
+    max-width:90% !important;
+    font-size:14px !important;
   }
-
 }
 
-/* ---------- ESCONDE CURSOR PERSONALIZADO NO CELULAR ---------- */
-@media (hover:none), (pointer:coarse){
-  .cursor-dot,
-  .cursor-ring{
+/* ===== CORREÇÃO FINAL — CURSOR MOBILE ===== */
+@media screen and (max-width: 700px), (hover:none), (pointer:coarse){
+
+  html body .cursor-dot,
+  html body .cursor-ring{
     display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
   }
 
-  body{
-    cursor:auto;
+  html body{
+    cursor:auto !important;
+  }
+
+  html body *,
+  html body a,
+  html body button,
+  html body input,
+  html body textarea{
+    cursor:auto !important;
   }
 }
