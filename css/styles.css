@@ -807,3 +807,15 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
   }
 
 }
+
+/* ---------- ESCONDE CURSOR PERSONALIZADO NO CELULAR ---------- */
+@media (hover:none), (pointer:coarse){
+  .cursor-dot,
+  .cursor-ring{
+    display:none !important;
+  }
+
+  body{
+    cursor:auto;
+  }
+}
