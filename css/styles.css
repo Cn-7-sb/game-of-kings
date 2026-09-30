@@ -911,27 +911,33 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
 
   /* VS — na altura das mãos */
   .sf-vs{
-    position:absolute !important;
-    top:31% !important;
-    left:49% !important;
-    right:auto !important;
-    font-size:44px !important;
-    z-index:7 !important;
-    transform:rotate(8deg) !important;
-  }
+  position:absolute !important;
+  top:28% !important;
+  left:50% !important;
+  right:auto !important;
+  font-family:var(--px);
+  font-size:44px !important;
+  color:var(--yellow);
+  text-shadow:
+    5px 5px 0 #000,
+    8px 8px 0 rgba(0,0,0,.35);
+  transform:rotate(8deg) !important;
+  z-index:10 !important;
+}
 
   /* MONSTER — GRANDE E NA ALTURA DA CHUN-LI */
   .sf-drink{
-    position:absolute !important;
-    top:12% !important;
-    right:-5% !important;
-    left:auto !important;
-    width:225px !important;
-    max-width:none !important;
-    height:auto !important;
-    z-index:5 !important;
-    transform:rotate(14deg) !important;
-  }
+  position:absolute !important;
+  top:10% !important;
+  left:auto !important;
+  right:-8% !important;
+  width:230px !important;
+  height:auto !important;
+  z-index:9 !important;
+  transform:rotate(14deg) !important;
+  transform-origin:center !important;
+  filter:drop-shadow(0 22px 22px rgba(0,0,0,.6));
+}
 
   .sf-name{
     margin-top:14px !important;
