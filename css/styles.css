@@ -734,20 +734,22 @@ button{
   position:relative;
   text-align:left;
   min-height:620px;
-  overflow:visible
+  overflow:visible;
 }
 
 
 /* ---------- CHUN-LI ---------- */
 
 .sf-chunli img#chunliImg{
-  width:360px;
-  max-width:52%;
+  width:390px;
+  max-width:none;
   margin:0;
   display:block;
+  position:absolute;
+  left:-20px;
+  top:0;
+  z-index:3;
   filter:drop-shadow(0 24px 30px rgba(0,0,0,.55));
-  position:relative;
-  z-index:3
 }
 
 
@@ -755,18 +757,22 @@ button{
 
 .sf-vs{
   position:absolute;
-  top:33%;
-  left:56%;
+  top:210px;
+  left:390px;
   right:auto;
+
   font-family:var(--px);
-  font-size:clamp(36px,5vw,58px);
+  font-size:58px;
   color:var(--yellow);
+
   text-shadow:
     5px 5px 0 #000,
     8px 8px 0 rgba(0,0,0,.35);
+
   transform:rotate(8deg);
-  z-index:6;
-  animation:blink 1.4s steps(2) infinite
+  z-index:8;
+
+  animation:blink 1.4s steps(2) infinite;
 }
 
 
@@ -774,15 +780,20 @@ button{
 
 .sf-drink{
   position:absolute;
-  top:18%;
-  left:67%;
+  top:105px;
+  left:520px;
   right:auto;
-  width:250px;
+
+  width:300px;
+  max-width:none;
   height:auto;
-  z-index:5;
+
+  z-index:7;
+
   transform:rotate(14deg);
   transform-origin:center;
-  filter:drop-shadow(0 22px 22px rgba(0,0,0,.6))
+
+  filter:drop-shadow(0 22px 22px rgba(0,0,0,.6));
 }
 
 
