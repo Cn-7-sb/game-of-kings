@@ -841,15 +841,15 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
     overflow:hidden !important;
   }
 
-  #charizard .char-pixel{
-    position:absolute !important;
-    width:82vw !important;
-    max-width:none !important;
-    height:auto !important;
-    right:-12% !important;
-    bottom:0 !important;
-    z-index:1 !important;
-  }
+#charizard .char-pixel{
+  position:absolute !important;
+  width:125vw !important;
+  max-width:none !important;
+  height:auto !important;
+  right:-24% !important;
+  bottom:-2% !important;
+  z-index:1 !important;
+}
 
   #charizard .char-overlay{
     position:relative !important;
