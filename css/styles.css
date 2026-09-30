@@ -1979,13 +1979,13 @@ footer{
 .sf-drink{
   position:absolute !important;
   top:55px !important;
-  right:-65px !important;
+  right:-35px !important;
   left:auto !important;
   width:300px !important;
   max-width:none !important;
   height:auto !important;
   z-index:7 !important;
-  transform:rotate(14deg) !important;
+  transform:translateX(60px) rotate(14deg) !important;
   transform-origin:center !important;
   filter:drop-shadow(0 22px 22px rgba(0,0,0,.6));
 }
