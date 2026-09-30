@@ -559,7 +559,7 @@ button{cursor:none;font-family:inherit}
 
 /* ---------- charizard ---------- */
 #charizard{position:relative;min-height:92vh;overflow:hidden;border-top:6px solid #000;border-bottom:6px solid #000;display:flex;align-items:flex-end}
-.char-bg{position:absolute;inset:-60px 0;background:url('../assets/charizard-burger-4k.jpg') center/cover no-repeat;will-change:transform}
+.char-bg{position:absolute;inset:-60px 0;background:url('../assets/charizard-pixel-nova.jpg') center/cover no-repeat;will-change:transform}
 .char-overlay{
   position:relative;
   z-index:2;
