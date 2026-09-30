@@ -156,9 +156,9 @@ function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('sh
 
   addEventListener('mouseover', e => {
     if(e.target.closest('input, textarea, [contenteditable="true"]')){
-      dot.style.backgroundImage = "url('../assets/handwriting.gif')";
+      dot.style.backgroundImage = "url('assets/handwriting.gif')";
     }else{
-      dot.style.backgroundImage = "url('../assets/normal.gif')";
+      dot.style.backgroundImage = "url('assets/normal.gif')";
     }
   });
 })();
