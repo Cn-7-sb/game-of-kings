@@ -885,54 +885,58 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
 
 }
 
-/* ===== STREET FIGHTER — CORREÇÃO MOBILE ===== */
-@media (max-width: 700px){
+/* ===== STREET FIGHTER — MOBILE AJUSTADO ===== */
+@media (max-width:700px){
 
   .sf-grid{
     display:block !important;
   }
 
   .sf-chunli{
-    min-height:620px !important;
-    width:100% !important;
     position:relative !important;
+    width:100% !important;
+    min-height:650px !important;
     overflow:visible !important;
   }
 
   /* CHUN-LI */
   .sf-chunli img#chunliImg{
-    width:250px !important;
-    max-width:52% !important;
-    margin:0 !important;
+    width:270px !important;
+    max-width:none !important;
     position:relative !important;
+    left:0 !important;
+    top:0 !important;
     z-index:3 !important;
   }
 
-  /* VS */
+  /* VS — na altura das mãos */
   .sf-vs{
-    top:35% !important;
-    left:48% !important;
-    font-size:42px !important;
+    position:absolute !important;
+    top:31% !important;
+    left:49% !important;
+    right:auto !important;
+    font-size:44px !important;
     z-index:7 !important;
+    transform:rotate(8deg) !important;
   }
 
-  /* MONSTER */
+  /* MONSTER — GRANDE E NA ALTURA DA CHUN-LI */
   .sf-drink{
-    top:25% !important;
+    position:absolute !important;
+    top:12% !important;
+    right:-5% !important;
     left:auto !important;
-    right:0 !important;
-    width:155px !important;
+    width:225px !important;
     max-width:none !important;
+    height:auto !important;
     z-index:5 !important;
-    transform:rotate(12deg) !important;
+    transform:rotate(14deg) !important;
   }
 
-  /* NOME */
   .sf-name{
     margin-top:14px !important;
   }
 
-  /* BARRAS */
   .sf-bars{
     width:100% !important;
     margin-top:20px !important;
