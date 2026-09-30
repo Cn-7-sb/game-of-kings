@@ -757,8 +757,8 @@ button{
 
 .sf-vs{
   position:absolute;
-  top:85px;
-  left:350px;
+  top:190px;
+  left:345px;
   right:auto;
   font-family:var(--px);
   font-size:58px;
@@ -777,9 +777,9 @@ button{
 .sf-drink{
   position:absolute;
   top:55px;
-  left:425px;
+  left:440px;
   right:auto;
-  width:250px;
+  width:270px;
   height:auto;
   z-index:9;
   transform:rotate(14deg);
