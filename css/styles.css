@@ -770,3 +770,40 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
+
+/* ---------- CHARIZARD NO CELULAR ---------- */
+@media(max-width:700px){
+
+  #charizard{
+    min-height:780px;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .char-overlay{
+    position:relative;
+    width:100%;
+    max-width:none;
+    padding:55px 24px 0;
+    z-index:3;
+  }
+
+  .char-title{
+    font-size:clamp(38px,12vw,58px);
+    line-height:.95;
+  }
+
+  .char-sub{
+    font-size:14px;
+    max-width:90%;
+  }
+
+  .char-pixel{
+    width:105vw;
+    max-width:none;
+    right:-28%;
+    bottom:-3%;
+    z-index:1;
+  }
+
+}
