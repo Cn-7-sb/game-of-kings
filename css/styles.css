@@ -758,7 +758,7 @@ button{
 .sf-vs{
   position:absolute;
   top:85px;
-  left:365px;
+  left:350px;
   right:auto;
   font-family:var(--px);
   font-size:58px;
@@ -767,7 +767,7 @@ button{
     5px 5px 0 #000,
     8px 8px 0 rgba(0,0,0,.35);
   transform:rotate(8deg);
-  z-index:8;
+  z-index:10;
   animation:blink 1.4s steps(2) infinite;
 }
 
@@ -776,12 +776,12 @@ button{
 
 .sf-drink{
   position:absolute;
-  top:35px;
-  left:475px;
+  top:55px;
+  left:425px;
   right:auto;
-  width:280px;
+  width:250px;
   height:auto;
-  z-index:7;
+  z-index:9;
   transform:rotate(14deg);
   transform-origin:center;
   filter:drop-shadow(0 22px 22px rgba(0,0,0,.6));
