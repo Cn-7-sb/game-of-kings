@@ -631,7 +631,7 @@ button{cursor:none;font-family:inherit}
 
 /* ---------- switch ---------- */
 #switch{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;border-bottom:6px solid #000}
-.switch-bg{position:absolute;inset:0;background:url('../assets/mario-face-red-4k.jpg') center bottom/cover;will-change:transform}
+.switch-bg{position:absolute;inset:0;background:url('../assets/cuphead-pixel.png') center bottom/cover;will-change:transform}
 .switch-overlay{position:relative;z-index:2;padding:80px 5vw;width:100%;max-width:1200px;margin:0 auto}
 .switch-title{font-size:clamp(34px,6vw,72px);font-weight:900;color:#fff;line-height:1;text-shadow:5px 5px 0 rgba(0,0,0,.35)}
 .switch-title span;color:var(--yellow)}
