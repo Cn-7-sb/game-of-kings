@@ -741,15 +741,15 @@ button{
 /* ---------- CHUN-LI ---------- */
 
 .sf-chunli img#chunliImg{
-  width:390px;
+  width:350px;
   max-width:none;
   margin:0;
   display:block;
+  filter:drop-shadow(0 24px 30px rgba(0,0,0,.55));
   position:absolute;
-  left:-20px;
+  left:0;
   top:0;
   z-index:3;
-  filter:drop-shadow(0 24px 30px rgba(0,0,0,.55));
 }
 
 
@@ -757,21 +757,17 @@ button{
 
 .sf-vs{
   position:absolute;
-  top:210px;
-  left:390px;
+  top:185px;
+  left:350px;
   right:auto;
-
   font-family:var(--px);
-  font-size:58px;
+  font-size:56px;
   color:var(--yellow);
-
   text-shadow:
     5px 5px 0 #000,
     8px 8px 0 rgba(0,0,0,.35);
-
   transform:rotate(8deg);
   z-index:8;
-
   animation:blink 1.4s steps(2) infinite;
 }
 
@@ -780,19 +776,14 @@ button{
 
 .sf-drink{
   position:absolute;
-  top:105px;
-  left:520px;
+  top:115px;
+  left:455px;
   right:auto;
-
-  width:300px;
-  max-width:none;
+  width:190px;
   height:auto;
-
   z-index:7;
-
   transform:rotate(14deg);
   transform-origin:center;
-
   filter:drop-shadow(0 22px 22px rgba(0,0,0,.6));
 }
 
@@ -800,10 +791,14 @@ button{
 /* ---------- nome ---------- */
 
 .sf-name{
+  position:absolute;
+  left:0;
+  top:405px;
+  margin:0;
   font-family:var(--px);
   font-size:12px;
-  margin-top:14px;
-  color:#fff
+  color:#fff;
+  z-index:10;
 }
 
 .sf-name em{
@@ -818,9 +813,14 @@ button{
 /* ---------- barras ---------- */
 
 .sf-bars{
-  margin-top:20px;
+  position:absolute;
+  left:0;
+  top:465px;
+  width:100%;
+  margin:0;
   display:grid;
-  gap:10px
+  gap:10px;
+  z-index:10;
 }
 
 .bar{
