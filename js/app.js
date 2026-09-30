@@ -143,14 +143,24 @@ function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('sh
   setTimeout(()=>{ if(!pre.classList.contains('done')){ pre.classList.add('done'); } }, 7000);
 })();
 
-/* ---------- CURSOR ---------- */
+/* ---------- CURSOR CUPHEAD ---------- */
 (function(){
-  const dot=$('#cursorDot'), ring=$('#cursorRing');
+  const dot = $('#cursorDot');
+
   if(!window.matchMedia('(hover:hover)').matches) return;
-  let rx=innerWidth/2, ry=innerHeight/2, tx=rx, ty=ry;
-  addEventListener('mousemove',e=>{ tx=e.clientX; ty=e.clientY; dot.style.transform=`translate(${tx-4}px,${ty-4}px)`; });
-  (function loop(){ rx+=(tx-rx)*.16; ry+=(ty-ry)*.16; ring.style.transform=`translate(${rx-18}px,${ry-18}px)`; requestAnimationFrame(loop); })();
-  addEventListener('mouseover',e=>{ document.body.classList.toggle('cursor-hot', !!e.target.closest('a,button,input,select,label')); });
+
+  addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+  });
+
+  addEventListener('mouseover', e => {
+    if(e.target.closest('input, textarea, [contenteditable="true"]')){
+      dot.style.backgroundImage = "url('../assets/handwriting.gif')";
+    }else{
+      dot.style.backgroundImage = "url('../assets/normal.gif')";
+    }
+  });
 })();
 
 /* ---------- NAV ---------- */
