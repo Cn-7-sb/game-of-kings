@@ -761,7 +761,7 @@ button{
   left:345px;
   right:auto;
   font-family:var(--px);
-  font-size:78px;
+  font-size:58px;
   color:var(--yellow);
   text-shadow:
     5px 5px 0 #000,
@@ -779,7 +779,7 @@ button{
   top:55px;
   left:440px;
   right:auto;
-  width:330px;
+  width:270px;
   height:auto;
   z-index:9;
   transform:rotate(14deg);
