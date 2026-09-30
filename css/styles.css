@@ -780,26 +780,26 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
-/* ===== CORREÇÃO FINAL — CHARIZARD MOBILE ===== */
-@media screen and (max-width: 700px){
+/* ===== CHARIZARD MOBILE ===== */
+@media screen and (max-width:700px){
 
   #charizard{
-    min-height: 720px !important;
+    min-height:720px !important;
     display:block !important;
     overflow:hidden !important;
   }
 
-  #charizard > .char-pixel{
+  #charizard .char-pixel{
     position:absolute !important;
-    width:82vw !important;
+    width:125vw !important;
     max-width:none !important;
     height:auto !important;
-    right:-12% !important;
-    bottom:0 !important;
+    right:-24% !important;
+    bottom:-2% !important;
     z-index:1 !important;
   }
 
-  #charizard > .char-overlay{
+  #charizard .char-overlay{
     position:relative !important;
     left:auto !important;
     bottom:auto !important;
@@ -817,29 +817,21 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
     max-width:90% !important;
     font-size:14px !important;
   }
+
 }
 
-/* ===== CORREÇÃO FINAL — CURSOR MOBILE ===== */
-@media screen and (max-width: 700px), (hover:none), (pointer:coarse){
+/* ===== CURSOR MOBILE ===== */
+@media (hover:none), (pointer:coarse){
 
-  html body .cursor-dot,
-  html body .cursor-ring{
+  .cursor-dot,
+  .cursor-ring{
     display:none !important;
-    visibility:hidden !important;
-    opacity:0 !important;
   }
 
-  html body{
+  body{
     cursor:auto !important;
   }
 
-  html body *,
-  html body a,
-  html body button,
-  html body input,
-  html body textarea{
-    cursor:auto !important;
-  }
 }
 
 @media screen and (max-width:700px){
@@ -869,24 +861,26 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
   }
 }
 
-/* ===== BUILDER FIXO NO CELULAR ===== */
-@media (max-width: 900px){
+/* ===== BUILDER — MOBILE ===== */
+@media (max-width:900px){
 
   .builder-grid{
-    display:flex !important;
-    flex-direction:column !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    align-items:start !important;
   }
 
   .builder-preview{
     position:sticky !important;
-    position:-webkit-sticky !important;
-    top:70px !important;
-    z-index:50 !important;
-    align-self:stretch !important;
+    top:180px !important;
+    width:100% !important;
+    align-self:start !important;
+    z-index:10 !important;
   }
 
   .builder-controls{
-    position:relative;
-    z-index:1;
+    position:relative !important;
+    z-index:1 !important;
   }
+
 }
