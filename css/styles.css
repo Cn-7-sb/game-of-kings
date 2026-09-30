@@ -884,3 +884,57 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
   }
 
 }
+
+/* ===== STREET FIGHTER — CORREÇÃO MOBILE ===== */
+@media (max-width: 700px){
+
+  .sf-grid{
+    display:block !important;
+  }
+
+  .sf-chunli{
+    min-height:620px !important;
+    width:100% !important;
+    position:relative !important;
+    overflow:visible !important;
+  }
+
+  /* CHUN-LI */
+  .sf-chunli img#chunliImg{
+    width:250px !important;
+    max-width:52% !important;
+    margin:0 !important;
+    position:relative !important;
+    z-index:3 !important;
+  }
+
+  /* VS */
+  .sf-vs{
+    top:35% !important;
+    left:48% !important;
+    font-size:42px !important;
+    z-index:7 !important;
+  }
+
+  /* MONSTER */
+  .sf-drink{
+    top:25% !important;
+    left:auto !important;
+    right:0 !important;
+    width:155px !important;
+    max-width:none !important;
+    z-index:5 !important;
+    transform:rotate(12deg) !important;
+  }
+
+  /* NOME */
+  .sf-name{
+    margin-top:14px !important;
+  }
+
+  /* BARRAS */
+  .sf-bars{
+    width:100% !important;
+    margin-top:20px !important;
+  }
+}
