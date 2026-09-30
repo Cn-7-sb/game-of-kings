@@ -869,21 +869,26 @@ footer{background:#08080e;border-top:4px solid var(--yellow);padding:44px 5vw;te
   }
 }
 
-/* ===== PREVIEW DO BURGER FIXO NO CELULAR ===== */
-@media (max-width: 900px){
+/* ===== MONTE SEU BURGER — MOBILE ===== */
+@media (max-width:900px){
+
+  .builder-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    align-items:start !important;
+  }
 
   .builder-preview{
-    position:fixed !important;
-    top:75px !important;
-    left:15px !important;
-    width:calc(100vw - 30px) !important;
-    z-index:100 !important;
-    margin:0 !important;
+    position:sticky !important;
+    top:80px !important;
+    align-self:start !important;
+    width:100% !important;
+    z-index:10 !important;
   }
 
   .builder-controls{
-    padding-top:420px !important;
+    position:relative;
+    z-index:1;
   }
 
 }
-
