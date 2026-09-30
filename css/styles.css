@@ -651,8 +651,8 @@ button{cursor:none;font-family:inherit}
 .builder-preview{position:sticky;top:100px;text-align:center;background:#0b170c;border:4px solid #2f6b2f;padding:30px;overflow:hidden}
 .lego-png{
   position:absolute;
-  width:90px;
-  height:90px;
+  width:70px;
+  height:34px;
   object-fit:contain;
   z-index:2;
   pointer-events:none;
@@ -660,23 +660,20 @@ button{cursor:none;font-family:inherit}
 }
 
 .lego-1{
-  top:7%;
+  top:8%;
   left:6%;
-  transform:rotate(-10deg);
   animation:floaty 5s ease-in-out infinite;
 }
 
 .lego-2{
-  top:12%;
-  right:7%;
-  transform:rotate(10deg);
+  top:14%;
+  right:8%;
   animation:floaty 6s ease-in-out infinite .8s;
 }
 
 .lego-3{
   bottom:10%;
-  left:10%;
-  transform:rotate(6deg);
+  left:12%;
   animation:floaty 7s ease-in-out infinite .4s;
 }
 .stack{display:flex;flex-direction:column;align-items:center;gap:6px;margin:10px auto 18px;min-height:260px;justify-content:center}
